@@ -1,6 +1,5 @@
 "use client"
-
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function PortfolioPage() {
   return (
@@ -8,6 +7,18 @@ export default function PortfolioPage() {
       {/* Hero Section */}
       <section className="px-4 py-20 md:py-32 flex items-center justify-center">
         <div className="max-w-3xl text-center">
+          {/* Added profile photo */}
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/profile.png"
+              alt="Manishankar"
+              width={200}
+              height={200}
+              className="rounded-full border-4 border-blue-500 shadow-lg"
+              priority
+            />
+          </div>
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-slate-900">
             Hello, I'm <span className="text-blue-500">Manishankar</span>
           </h1>
@@ -19,10 +30,6 @@ export default function PortfolioPage() {
             <span className="text-blue-500 font-medium"> Prompt Analysis</span>, and
             <span className="text-blue-500 font-medium"> AI-based systems</span>.
           </p>
-
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-lg">
-            Get Resume
-          </Button>
         </div>
       </section>
 
